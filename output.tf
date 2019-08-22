@@ -1,12 +1,17 @@
-output "names" {
+output "name" {
   depends_on = [azurerm_resource_group.rg]
 
-  value = zipmap(local.rg_list, azurerm_resource_group.rg.*.name)
+    value = {
+    for group in keys(azurerm_resource_group.rg):
+     group => azurerm_resource_group.rg[group].name
+  }
 }
 
 output "ids" {
   depends_on = [azurerm_resource_group.rg]
 
-  value = zipmap(local.rg_list, azurerm_resource_group.rg.*.id)
+  value = {
+    for group in keys(azurerm_resource_group.rg):
+     group => azurerm_resource_group.rg[group].id
 }
-
+}
