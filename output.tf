@@ -1,4 +1,4 @@
-output "name" {
+output "names" {
   depends_on = [azurerm_resource_group.rg]
 
     value = {
