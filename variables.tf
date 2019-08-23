@@ -3,6 +3,13 @@ variable "resource_groups" {
   type        = map(string)
 }
 
+# Example of resource_groups data structure:
+# myrg = {
+#     rg1     = "-production"
+#     rg2     = "-qa"
+#     rg3     = "-dev"
+# }
+
 variable "location" {
   description = "(Required) Define the region where the resource groups will be created"
 }

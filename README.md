@@ -10,6 +10,7 @@ module "resource_groups" {
     prefix                  = "${var.prefix}"
     resource_groups         = "${var.resource_groups}"
     location                = "${var.location_map["region1"]}"
+    tags                    = "${var.tags}"
 }
 ```
 
@@ -21,6 +22,7 @@ module "resource_groups" {
     prefix                  = "${var.prefix}"
     resource_groups         = "${var.resource_groups}"
     location                = "${var.location_map["region1"]}"
+    tags                    = "${var.tags}"
 }
 ```
 
