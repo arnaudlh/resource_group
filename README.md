@@ -5,22 +5,24 @@
 Reference the module to a specific version (recommended):
 ```
 module "resource_groups" {
-    source                  = "git://github.com/LaurentLesle/azure_terraform_blueprint_modules_resource_group.git?ref=v1.1"
+    source                  = "git://github.com/aztfmod/resource_group.git?ref=v1.1"
   
     prefix                  = "${var.prefix}"
     resource_groups         = "${var.resource_groups}"
     location                = "${var.location_map["region1"]}"
+    tags                    = "${var.tags}"
 }
 ```
 
 Or get the latest version
 ```
 module "resource_groups" {
-    source                  = "git://github.com/LaurentLesle/azure_terraform_blueprint_modules_resource_group.git?ref=latest"
+    source                  = "git://github.com/aztfmod/resource_group.git?ref=latest"
   
     prefix                  = "${var.prefix}"
     resource_groups         = "${var.resource_groups}"
     location                = "${var.location_map["region1"]}"
+    tags                    = "${var.tags}"
 }
 ```
 
