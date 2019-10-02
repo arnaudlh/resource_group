@@ -1,3 +1,9 @@
+output "keys" {
+  depends_on = [azurerm_resource_group.rg]
+
+  value = azurerm_resource_group.rg
+}
+
 output "names" {
   depends_on = [azurerm_resource_group.rg]
 
@@ -15,3 +21,5 @@ output "ids" {
      group => azurerm_resource_group.rg[group].id
 }
 }
+
+
