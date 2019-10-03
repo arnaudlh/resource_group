@@ -1,4 +1,4 @@
-output "keys" {
+output "object" {
   depends_on = [azurerm_resource_group.rg]
 
   value = azurerm_resource_group.rg
