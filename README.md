@@ -28,6 +28,8 @@ module "resource_groups" {
 
 ## resource_groups
 (Required) Object that describes the resource groups to be created with their geo. 
+Global group of tags will be added to all RG, specific tags can be added per RG.
+
 ```hcl
 variable "resource_groups" {
   description = "(Required) Map of the resource groups to create"
@@ -48,6 +50,10 @@ resource_groups = {
         insights      = { 
                         name     = "-insights-demo"
                         location = "francecentral" 
+                        tags     = {
+                                    project     = "Pattaya"
+                                    approver     = "Gunter"
+                                    }   
                         },
 }
 ```
