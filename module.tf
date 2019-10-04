@@ -4,6 +4,6 @@ resource "azurerm_resource_group" "rg" {
 
          name     = "${var.prefix}${each.value.name}"
          location = each.value.location
-         tags     = lookup(each.value, "tags", null) == null ? local.tags : merge(each.value.tags, local.tags)
+         tags     = lookup(each.value, "tags", null)
 
 }

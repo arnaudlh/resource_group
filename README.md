@@ -39,22 +39,22 @@ variable "resource_groups" {
 Example of structure: 
 ```hcl
 resource_groups = {
-        apim          = { 
-                        name     = "-apim-demo"
-                        location = "southeastasia" 
-                        },
-        networking    = {    
-                        name     = "-networking-demo"
-                        location = "eastasia" 
-                        },
-        insights      = { 
-                        name     = "-insights-demo"
-                        location = "francecentral" 
-                        tags     = {
-                                    project     = "Pattaya"
-                                    approver     = "Gunter"
-                                    }   
-                        },
+    apim          = { 
+                    name     = "-apim-demo"
+                    location = "southeastasia" 
+    },
+    networking    = {    
+                    name     = "-networking-demo"
+                    location = "eastasia" 
+    },
+    insights      = { 
+                    name     = "-insights-demo"
+                    location = "francecentral" 
+                    tags     = {
+                      project     = "Pattaya"
+                      approver     = "Gunter"
+                    }   
+    },
 }
 ```
 
@@ -79,10 +79,10 @@ resource "random_string" "prefix" {
 ```
 
 # Output
-## keys
+## object
 Returns the full set of created resource groups as a map, as follows:
 ```hcl
-keys = {
+object = {
   "apim" = {
     "id" = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/tst-apim-demo"
     "location" = "southeastasia"
