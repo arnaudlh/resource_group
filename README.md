@@ -78,6 +78,22 @@ resource "random_string" "prefix" {
 }
 ```
 
+## tags
+(Optional) Map of tags for the deployment
+```hcl
+variable "tags" {
+  description = "(Optional) map of base tags for the deployment"
+}
+```
+Example
+```hcl
+tags = {
+    environment     = "DEV"
+    owner           = "Arnaud"
+    deploymentType  = "Terraform"
+  }
+```
+
 # Output
 ## object
 Returns the full set of created resource groups as a map, as follows:
