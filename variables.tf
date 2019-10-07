@@ -1,18 +1,22 @@
 variable "resource_groups" {
   description = "(Required) Map of the resource groups to create"
-  type        = map(string)
 }
 
 # Example of resource_groups data structure:
-# myrg = {
-#     rg1     = "-production"
-#     rg2     = "-qa"
-#     rg3     = "-dev"
+# resource_groups = {
+#   apim          = { 
+#                   name     = "-apim-demo"
+#                   location = "southeastasia" 
+#                   },
+#   networking    = {    
+#                   name     = "-networking-demo"
+#                   location = "southeastasia" 
+#                   },
+#   insights      = { 
+#                   name     = "-insights-demo"
+#                   location = "southeastasia" 
+#                   },
 # }
-
-variable "location" {
-  description = "(Required) Define the region where the resource groups will be created"
-}
 
 variable "prefix" {
   description = "(Optional) You can use a prefix to add to the list of resource groups you want to create"
@@ -20,4 +24,5 @@ variable "prefix" {
 
 variable "tags" {
   description = "tags for the deployment"
+  default     = {}
 }
